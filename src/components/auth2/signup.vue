@@ -93,6 +93,12 @@
       // Sign Up Function
       const signUp = async () => {
         errorMessage.value = ''
+
+           // we will enforce that the gmail ends with '@um6p.ma'
+         if (!email.value.endsWith('@um6p.ma')) {
+          errorMessage.value = 'Please use a valid UM6P email address';
+          return;
+        }
   
         try {
           // Create the user
